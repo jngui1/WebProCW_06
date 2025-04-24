@@ -29,7 +29,7 @@ class App extends Component {
                 <Counter/>
 
             	<FilteredList items={produce}/>
-                </div>
+            </div>
         );
     }
 }

@@ -28,6 +28,51 @@
   color: #61dafb;
 }
 
+#hello {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #F08080;
+    border-style: solid;
+    padding: 10px;
+}
+
+.counter {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #8080F0;
+    border-style: solid;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.filter-list {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #80F080;
+    border-style: solid;
+    padding: 10px;
+}
+
+#button-div {
+    width: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#options {
+    text-align: center;
+}
+
+#list {
+    width: 150px;
+    margin-left: 134px;
+    margin-right: auto;
+    text-align: left;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

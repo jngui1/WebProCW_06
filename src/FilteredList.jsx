@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { DropdownButton, DropdownItem } from 'react-bootstrap';
 import List from './List';
+import './App.css';
 
 class FilteredList extends Component {
     constructor(props) {
@@ -10,7 +11,7 @@ class FilteredList extends Component {
         //TODO (FilteredList): Add an additional state variable within this.state called "type" and set it to a default value
         this.state = {
             search: "",
-            type: ""
+            type: "All"
         };
     }
 
@@ -34,18 +35,25 @@ class FilteredList extends Component {
             <div className = "filter-list">
                 <h1>Produce Search</h1>
                 
-                <DropdownButton id="typeDropdown" title={"Type"}>
-                    <DropdownItem eventKey="all" onClick={this.onFilter}>All</DropdownItem>
+                <div id="button-div">
+                    <DropdownButton id="typeDropdown" title={"Type"}>
+                        <div id="options">
+                            <DropdownItem eventKey="all" onClick={this.onFilter}>All</DropdownItem><br/>
+                            
+                            <DropdownItem eventKey="Fruit" onClick={this.onFilter}>Fruit</DropdownItem><br/>
+                            
+                            <DropdownItem eventKey="Vegetable" onClick={this.onFilter}>Vegetable</DropdownItem><br/>
+                            
+                        </div>
+                        
+                    </DropdownButton>
                     
-                    <DropdownItem eventKey="Fruit" onClick={this.onFilter}>Fruit</DropdownItem>
-                    
-                    <DropdownItem eventKey="Vegetable" onClick={this.onFilter}>Vegetable</DropdownItem>
-                    
-                </DropdownButton>
+                </div><br/>
                 
                 <input type = "text" placeholder = "Search" onChange = {this.onSearch} />
                 
-                <List items = {this.props.items.filter(this.filterItem)} />
+                <div id="list"><List items = {this.props.items.filter(this.filterItem)} /></div>
+                
             </div>
         );
     }
